@@ -300,7 +300,6 @@ async function getHTMLContentFromPage(page) {
 // --------------------------------- Get raw HTML content from all pages
 async function getRawHTMLContentFromPages() {
     const pageCount = getPageCount();
-    // TODO: put this back
     const pages = Array.from({ length: pageCount }, (_, i) => i + 1);
     const htmlContent = await Promise.all(pages.map(getHTMLContentFromPage));
     return htmlContent;
