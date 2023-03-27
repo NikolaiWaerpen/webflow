@@ -323,4 +323,5 @@ async function getListItemsFromAllPages() {
         return;
     const listItems = await getListItemsFromAllPages();
     console.log("LIST ITEMS update", listItems);
+    console.log("hey mom");
 })();
