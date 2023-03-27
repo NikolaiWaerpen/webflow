@@ -301,16 +301,8 @@ async function getHTMLContentFromPage(page) {
 async function getRawHTMLContentFromPages() {
     const pageCount = getPageCount();
     // TODO: put this back
-    // const pages = Array.from({ length: pageCount }, (_, i) => i + 1);
-    // const htmlContent = await Promise.all(pages.map(getHTMLContentFromPage));
-    // THIS IS TEMP \/
-    const htmlContent = await Promise.all([1].map(async () => {
-        const response = await fetch(getUrl(), {
-            method: "GET",
-        });
-        const html = await response.text();
-        return html;
-    }));
+    const pages = Array.from({ length: pageCount }, (_, i) => i + 1);
+    const htmlContent = await Promise.all(pages.map(getHTMLContentFromPage));
     return htmlContent;
 }
 // --------------------------------- Get list items from HTML content
