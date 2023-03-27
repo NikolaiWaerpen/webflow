@@ -331,5 +331,5 @@ async function getListItemsFromAllPages() {
     if (!isPagination())
         return;
     const listItems = await getListItemsFromAllPages();
-    console.log("LIST ITEMS", listItems);
+    console.log("LIST ITEMS update", listItems);
 })();
